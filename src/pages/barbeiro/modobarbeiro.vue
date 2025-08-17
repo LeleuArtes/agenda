@@ -1,10 +1,10 @@
 <template>
   <div class="agendamento-bg">
-    <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 16px;">
-      <button @click="irParaServicos" class="servicos-btn">Painel de Serviços</button>
-    </div>
     <div class="agendamento-card">
       <h1 class="highlight">Agenda Completa</h1>
+      <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 16px;">
+        <button @click="irParaServicos" class="servicos-btn">Painel de Serviços</button>
+      </div>
       <div class="periodo-section">
         <label class="destaque-label">Filtrar por período:</label>
         <VueDatePicker
