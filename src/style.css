@@ -76,18 +76,18 @@ button:focus-visible {
 }
 
 .agendamento-card {
-  max-width: 340px;
+  max-width: 300px;
   width: 100%;
   margin: 16px auto;
   box-sizing: border-box;
-  padding: 16px 8vw;
+  padding: 16px 12vw;
 }
 
 @media (max-width: 600px) {
   .agendamento-card {
-    max-width: 94vw;
+    max-width: 88vw;
     margin: 8px auto;
-    padding: 0 4vw;
+    padding: 0 8vw;
   }
   .agendamento-bg {
     padding: 0;
