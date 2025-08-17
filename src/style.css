@@ -65,6 +65,20 @@ button:focus-visible {
   text-align: center;
 }
 
+.agendamento-card {
+  max-width: 400px;
+  width: 100%;
+  margin: 32px auto;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .agendamento-card {
+    max-width: 98vw;
+    margin: 12px auto;
+    padding: 0 4px;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
