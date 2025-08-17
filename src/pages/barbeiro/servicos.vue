@@ -1,24 +1,26 @@
 <template>
   <div class="servicos-panel">
     <h2>Painel de Serviços</h2>
-    <div class="servicos-list">
-      <div v-for="servico in servicos" :key="servico.id" class="servico-card">
-        <div class="servico-info">
-          <span class="servico-nome">{{ servico.nome }}</span>
-          <span class="servico-valor">R$ {{ servico.valor }}</span>
-        </div>
-        <div class="servico-actions">
-          <button @click="editarServico(servico)">Editar</button>
-          <button @click="excluirServico(servico.id)">Excluir</button>
+    <div>
+      <div class="servicos-list">
+        <div v-for="servico in servicos" :key="servico.id" class="servico-card">
+          <div class="servico-info">
+            <span class="servico-nome">{{ servico.nome }}</span>
+            <span class="servico-valor">R$ {{ servico.valor }}</span>
+          </div>
+          <div class="servico-actions">
+            <button @click="editarServico(servico)">Editar</button>
+            <button @click="excluirServico(servico.id)">Excluir</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="servico-form">
-      <h3>{{ editando ? 'Editar Serviço' : 'Adicionar Serviço' }}</h3>
-      <input v-model="form.nome" placeholder="Nome do serviço" />
-      <input v-model.number="form.valor" type="number" placeholder="Valor (R$)" />
-      <button @click="salvarServico">{{ editando ? 'Salvar' : 'Adicionar' }}</button>
-      <button v-if="editando" @click="cancelarEdicao">Cancelar</button>
+      <div class="servico-form">
+        <h3>{{ editando ? 'Editar Serviço' : 'Adicionar Serviço' }}</h3>
+        <input v-model="form.nome" placeholder="Nome do serviço" />
+        <input v-model.number="form.valor" type="number" placeholder="Valor (R$)" />
+        <button @click="salvarServico">{{ editando ? 'Salvar' : 'Adicionar' }}</button>
+        <button v-if="editando" @click="cancelarEdicao">Cancelar</button>
+      </div>
     </div>
   </div>
 </template>
