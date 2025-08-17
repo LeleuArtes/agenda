@@ -1,7 +1,7 @@
 <template>
   <div class="servicos-panel">
     <h2>Painel de Serviços</h2>
-    <div>
+    <div style="width: 100%;">
       <div class="servicos-list">
         <div v-for="servico in servicos" :key="servico.id" class="servico-card">
           <div class="servico-info">
@@ -14,7 +14,7 @@
           </div>
         </div>
       </div>
-      <div class="servico-form">
+      <div class="servico-form" style="width: 100%; margin-left: 0; margin-right: 0;">
         <h3>{{ editando ? 'Editar Serviço' : 'Adicionar Serviço' }}</h3>
         <input v-model="form.nome" placeholder="Nome do serviço" />
         <input v-model.number="form.valor" type="number" placeholder="Valor (R$)" />
