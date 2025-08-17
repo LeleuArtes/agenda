@@ -1,6 +1,6 @@
 <template>
   <div class="agendamento-bg">
-    <div style="text-align: right; margin-bottom: 16px;">
+    <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 16px;">
       <button @click="irParaServicos" class="servicos-btn">Painel de Serviços</button>
     </div>
     <div class="agendamento-card">
