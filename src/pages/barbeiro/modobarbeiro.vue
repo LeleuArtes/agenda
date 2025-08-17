@@ -37,7 +37,7 @@
             </div>
             <strong>Status:</strong> <span :class="ag.status === 'ativo' ? 'ativo' : 'cancelado'">{{ ag.status }}</span><br>
             <strong>Pagamento:</strong> <span :class="ag.pagamento === 'PG' ? 'pg' : ag.pagamento === 'AG' ? 'ag' : ''">{{ ag.pagamento || '-' }}</span><br>
-            <div style="display: flex; gap: 10px; margin-top: 8px;">
+            <div class="botoes-agendamento" style="display: flex; gap: 10px; margin-top: 8px;">
               <button v-if="ag.status === 'ativo'" @click="alterarPagamento(ag.id, 'PG')" class="pg-btn">PG</button>
               <button v-if="ag.status === 'ativo'" @click="alterarPagamento(ag.id, 'AG')" class="ag-btn">AG</button>
               <button v-if="ag.status === 'ativo'" @click="cancelarAgendamento(ag.id)" class="cancelar-btn">Cancelar</button>
@@ -232,6 +232,15 @@ function fecharHistoricoPagamento() {
   width: 100%;
   text-align: center;
 }
+.card-agendamento {
+  background: #23243a;
+  border-radius: 12px;
+  padding: 18px 12px;
+  margin-bottom: 18px;
+  color: #FFD700;
+  box-shadow: 0 2px 12px #0004;
+  position: relative;
+}
 @media (max-width: 600px) {
   .agendamento-card {
     max-width: 320px;
@@ -239,6 +248,10 @@ function fecharHistoricoPagamento() {
     margin-left: auto;
     margin-right: auto;
     padding: 8px 8px;
+  }
+  .botoes-agendamento {
+    justify-content: center;
+    gap: 8px;
   }
 }
 .highlight {
@@ -450,5 +463,12 @@ function fecharHistoricoPagamento() {
   padding: 8px;
   margin-bottom: 6px;
   color: #FFD700;
+}
+.botoes-agendamento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+  justify-content: flex-start;
 }
 </style>
