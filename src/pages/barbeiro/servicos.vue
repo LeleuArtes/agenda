@@ -131,10 +131,12 @@ onMounted(carregarServicos);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 16px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin-top: 32px;
+  background: #333;
+  border-radius: 8px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  align-items: stretch;
 }
 .servico-form input {
   padding: 8px;
