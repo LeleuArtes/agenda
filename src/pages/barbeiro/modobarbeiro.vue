@@ -218,6 +218,12 @@ function fecharHistoricoPagamento() {
   justify-content: center;
 }
 .agendamento-card {
+  max-width: 320px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 16px 16px;
   background: #181a24;
   border: 2px solid #FFA500;
   border-radius: 18px;
@@ -225,6 +231,15 @@ function fecharHistoricoPagamento() {
   max-width: 600px;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .agendamento-card {
+    max-width: 320px;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 8px;
+  }
 }
 .highlight {
   color: #FFD700;
