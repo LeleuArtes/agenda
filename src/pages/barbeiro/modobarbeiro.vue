@@ -220,6 +220,19 @@ function fecharHistoricoPagamento() {
 </script>
 
 <style scoped>
+ .servicos-btn {
+   background: #FFA500;
+   color: #181a24;
+   border: none;
+   border-radius: 8px;
+   padding: 12px 24px;
+   font-size: 1.1rem;
+   font-weight: bold;
+   cursor: pointer;
+   box-shadow: 0 2px 8px #0004;
+   margin-bottom: 8px;
+   transition: background 0.2s;
+ }
 .agendamento-bg {
   min-height: 100vh;
   background: linear-gradient(180deg, #23243a 0%, #121212 100%);
