@@ -375,6 +375,16 @@ function fecharHistoricoPagamento() {
   text-align: left;
   max-height: 80vh;
   overflow-y: auto;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+@media (max-width: 600px) {
+  .modal {
+    max-width: 98vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 18px 8px;
+  }
 }
 .filtro-pag {
   margin-bottom: 16px;
