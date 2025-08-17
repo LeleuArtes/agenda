@@ -83,6 +83,26 @@ button:focus-visible {
   padding: 16px 12vw;
 }
 
+.horarios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.horario-btn {
+  min-width: 70px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: none;
+  background: #23243a;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 0;
+}
+
 @media (max-width: 600px) {
   .agendamento-card {
     max-width: 88vw;
