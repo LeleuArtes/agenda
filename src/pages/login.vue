@@ -104,15 +104,20 @@ async function login() {
   border: 2px solid #FFA500;
   border-radius: 18px;
   box-shadow: 0 8px 32px #0006;
-  padding: 36px 8vw 24px 8vw;
+  padding: 36px 16px 24px 16px;
   max-width: 320px;
-  width: 100%;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 @media (max-width: 600px) {
   .card {
-    max-width: 90vw;
-    padding: 24px 10vw 16px 10vw;
+    max-width: 320px;
+    width: 90vw;
+    padding: 24px 8px 16px 8px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .highlight {
