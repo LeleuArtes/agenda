@@ -71,10 +71,21 @@ async function signup() {
   border: 2px solid #FFA500;
   border-radius: 18px;
   box-shadow: 0 8px 32px #0006;
-  padding: 36px 32px 24px 32px;
-  max-width: 350px;
-  width: 100%;
+  padding: 36px 16px 24px 16px;
+  max-width: 320px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .card {
+    max-width: 320px;
+    width: 90vw;
+    padding: 24px 8px 16px 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .highlight {
   color: #FFD700;

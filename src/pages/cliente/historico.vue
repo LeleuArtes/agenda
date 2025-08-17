@@ -1,6 +1,6 @@
 <template>
   <div class="agendamento-bg">
-    <div class="agendamento-card">
+    <div class="agendamento-card card">
       <h1 class="highlight">Histórico de Agendamentos</h1>
       <div v-if="agendamentos.length === 0">Nenhum agendamento encontrado.</div>
       <div v-for="ag in agendamentos" :key="ag.id" class="agendamento-item">
@@ -75,6 +75,27 @@ function voltar() {
   max-width: 500px;
   width: 100%;
   text-align: center;
+}
+.card {
+  background: #181a24;
+  border: 2px solid #FFA500;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0006;
+  padding: 36px 16px 24px 16px;
+  max-width: 320px;
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .card {
+    max-width: 320px;
+    width: 90vw;
+    padding: 24px 8px 16px 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .highlight {
   color: #FFD700;
