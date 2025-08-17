@@ -104,10 +104,16 @@ async function login() {
   border: 2px solid #FFA500;
   border-radius: 18px;
   box-shadow: 0 8px 32px #0006;
-  padding: 36px 32px 24px 32px;
-  max-width: 350px;
+  padding: 36px 8vw 24px 8vw;
+  max-width: 320px;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 600px) {
+  .card {
+    max-width: 90vw;
+    padding: 24px 10vw 16px 10vw;
+  }
 }
 .highlight {
   color: #FFD700;
