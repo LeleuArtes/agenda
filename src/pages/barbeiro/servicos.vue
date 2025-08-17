@@ -93,8 +93,9 @@ onMounted(carregarServicos);
 }
 .servico-card {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background: #333;
   border-radius: 8px;
   padding: 12px 16px;
@@ -103,6 +104,8 @@ onMounted(carregarServicos);
 .servico-info {
   display: flex;
   flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 .servico-nome {
   font-weight: bold;
@@ -120,12 +123,16 @@ onMounted(carregarServicos);
   padding: 6px 12px;
   cursor: pointer;
   font-weight: bold;
+  white-space: nowrap;
 }
 .servico-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .servico-form input {
   padding: 8px;
