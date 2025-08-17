@@ -335,8 +335,9 @@ function irParaHistorico() {
 .horarios-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 .horarios-list button {
   min-width: 70px;
