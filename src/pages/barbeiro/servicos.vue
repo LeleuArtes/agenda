@@ -25,7 +25,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import { supabase } from '@/supabase';
+import { supabase } from '../../supabase/supabase.js';
 
 const servicos = ref([]);
 const form = ref({ nome: '', valor: null });

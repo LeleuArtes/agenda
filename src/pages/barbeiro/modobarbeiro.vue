@@ -1,5 +1,8 @@
 <template>
   <div class="agendamento-bg">
+    <div style="text-align: right; margin-bottom: 16px;">
+      <button @click="irParaServicos" class="servicos-btn">Painel de Serviços</button>
+    </div>
     <div class="agendamento-card">
       <h1 class="highlight">Agenda Completa</h1>
       <div class="periodo-section">
@@ -76,7 +79,14 @@
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
 import { ref, computed, onMounted, watch } from 'vue';
+import { useRouter } from 'vue-router';
 import { supabase } from '../../supabase/supabase';
+
+const router = useRouter();
+
+function irParaServicos() {
+  router.push({ path: '/barbeiro/servicos' });
+}
 
 const now = new Date();
 const startOfYear = new Date(now.getFullYear(), 0, 1);

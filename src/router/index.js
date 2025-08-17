@@ -6,6 +6,7 @@ import BarbeiroDashboard from '../pages/barbeiro/dashboard.vue';
 import ClienteAgendamento from '../pages/cliente/agendamento.vue';
 import ClienteHistorico from '../pages/cliente/historico.vue';
 import ModoBarbeiro from '../pages/barbeiro/modobarbeiro.vue';
+import Servicos from '../pages/barbeiro/servicos.vue';
 
 const routes = [
   { path: '/', redirect: '/login' },
@@ -14,6 +15,7 @@ const routes = [
   { path: '/cliente/dashboard', component: ClienteDashboard },
   { path: '/barbeiro/dashboard', component: BarbeiroDashboard },
   { path: '/barbeiro/modobarbeiro', component: ModoBarbeiro },
+  { path: '/barbeiro/servicos', component: Servicos },
   { path: '/cliente/agendamento', component: ClienteAgendamento },
   { path: '/cliente/historico', component: ClienteHistorico },
 ];

@@ -87,27 +87,23 @@ const horarioSelecionado = ref('');
 const servicosSelecionados = ref([]);
 const mensagem = ref('');
 const horarios = Array.from({ length: 16 }, (_, i) => `${(8 + i).toString().padStart(2, '0')}:00`);
-const servicos = [
-  { nome: 'Corte Disfarçado', preco: 20.00 },
-  { nome: 'Corte Navalhado', preco: 20.00 },
-  { nome: 'Corte Disfarce Só Máquina', preco: 18.00 },
-  { nome: 'Corte Americano', preco: 20.00 },
-  { nome: 'Corte em Criança', preco: 20.00 },
-  { nome: 'Corte Um Pente', preco: 15.00 },
-  { nome: 'Corte Tesoura', preco: 20.00 },
-  { nome: 'Pé de Cabelo', preco: 7.00 },
-  { nome: 'Sobrancelhas', preco: 7.00 },
-  { nome: 'Bigode', preco: 3.00 },
-  { nome: 'Barba Raspada', preco: 10.00 },
-  { nome: 'Barba Modelada', preco: 12.00 },
-  { nome: 'Pigmentação Preta', preco: 12.00 },
-  { nome: 'Nevou Sem Corte', preco: 50.00 },
-  { nome: 'Nevou + Corte', preco: 70.00 },
-  { nome: 'Reflexo Sem Corte', preco: 50.00 },
-  { nome: 'Reflexo + Corte', preco: 65.00 },
-  { nome: 'Desenhos Acima de R$5', preco: 5.00 },
-  { nome: 'Moral', preco: 30.00 }
-];
+// ...existing code...
+const servicos = ref([]);
+
+async function carregarServicos() {
+  const { data, error } = await supabase
+    .from('servicos')
+    .select('id, nome, valor');
+  if (!error && data) {
+    servicos.value = data.map(s => ({ nome: s.nome, preco: Number(s.valor) }));
+  }
+}
+
+onMounted(() => {
+  userStore.fetchProfile();
+  carregarAgendamentos();
+  carregarServicos();
+});
 const agendamentosDia = ref([]);
 
 function formatarDataPtBr(date) {
