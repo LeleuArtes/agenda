@@ -377,16 +377,16 @@ function fecharHistoricoPagamento() {
   overflow-y: auto;
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 12vh;
-  margin-bottom: 12vh;
+  margin-top: 13.2vh;
+  margin-bottom: 13.2vh;
 }
 @media (max-width: 600px) {
   .modal {
     max-width: 98vw;
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-top: 8vh;
-    margin-bottom: 8vh;
+    margin-top: 8.8vh;
+    margin-bottom: 8.8vh;
     padding: 18px 8px;
   }
 }
