@@ -74,8 +74,7 @@ async function signup() {
   padding: 36px 16px 24px 16px;
   max-width: 320px;
   width: 90vw;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 6vh auto 6vh auto;
   text-align: center;
 }
 @media (max-width: 600px) {
@@ -83,8 +82,7 @@ async function signup() {
     max-width: 320px;
     width: 90vw;
     padding: 24px 8px 16px 8px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 3vh auto 3vh auto;
   }
 }
 .highlight {
