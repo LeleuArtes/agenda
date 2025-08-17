@@ -367,7 +367,7 @@ function fecharHistoricoPagamento() {
   background: #181a24;
   border: 2px solid #FFD700;
   border-radius: 16px;
-  padding: 32px 24px;
+  padding: 32px 24px 32px 24px;
   max-width: 400px;
   width: 100%;
   color: #FFD700;
@@ -377,17 +377,23 @@ function fecharHistoricoPagamento() {
   overflow-y: auto;
   margin-left: 5vw;
   margin-right: 5vw;
-  margin-top: 13.2vh;
-  margin-bottom: 13.2vh;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 @media (max-width: 600px) {
   .modal {
     max-width: 98vw;
     margin-left: 3vw;
     margin-right: 3vw;
-    margin-top: 8.8vh;
-    margin-bottom: 8.8vh;
-    padding: 18px 8px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    padding: 18px 8px 18px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 .filtro-pag {
@@ -407,6 +413,9 @@ function fecharHistoricoPagamento() {
   margin-top: 8px;
   margin-bottom: 8px;
   transition: background 0.2s;
+  align-self: center;
+  margin-top: 18px;
+  margin-bottom: 0;
 }
 .historico-pag-btn:hover {
   background: #FFD700;
@@ -430,6 +439,7 @@ function fecharHistoricoPagamento() {
   cursor: pointer;
   margin-top: 8px;
   transition: background 0.2s;
+  align-self: center;
 }
 .voltar-btn:hover {
   background: #ff1744;
