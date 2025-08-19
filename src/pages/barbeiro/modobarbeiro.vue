@@ -101,6 +101,17 @@ const showHistoricoPagamento = ref(false);
 const historicoPagamentos = ref([]);
 const filtroPagamento = ref('');
 
+// Função para alterar status de pagamento AG/PG
+async function alterarPagamento(agendamentoId, novoStatus) {
+  const { error } = await supabase
+    .from('agendamentos')
+    .update({ pagamento: novoStatus })
+    .eq('id', agendamentoId);
+  if (!error) {
+    await carregarAgenda();
+  }
+}
+
 async function carregarAbatimentos(agendamentos) {
   const ids = agendamentos.map(a => a.id);
   if (!ids.length) return;
@@ -514,8 +525,9 @@ function fecharHistoricoPagamento() {
 .botoes-agendamento {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
 }
 </style>
