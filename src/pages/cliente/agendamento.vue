@@ -76,7 +76,7 @@ function servicoClass(servico) {
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
 import { onMounted } from 'vue';
-import { ref, computed, onMounted, watch } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { supabase } from '../../supabase/supabase';
 import { useUserStore } from '../../store/user';
@@ -90,7 +90,6 @@ const horarioSelecionado = ref('');
 const servicosSelecionados = ref([]);
 const mensagem = ref('');
 const horarios = Array.from({ length: 16 }, (_, i) => `${(8 + i).toString().padStart(2, '0')}:00`);
-// ...existing code...
 const servicos = ref([]);
 
 async function carregarServicos() {
