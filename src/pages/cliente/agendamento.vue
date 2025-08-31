@@ -75,6 +75,7 @@ function servicoClass(servico) {
 }
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css';
+import { onMounted } from 'vue';
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { supabase } from '../../supabase/supabase';
@@ -105,6 +106,13 @@ onMounted(() => {
   userStore.fetchProfile();
   carregarAgendamentos();
   carregarServicos();
+  // Bloqueia scroll do calendário para troca de mês
+  setTimeout(() => {
+    const dp = document.querySelector('.vuepic-datepicker');
+    if (dp) {
+      dp.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+    }
+  }, 500);
 });
 const agendamentosDia = ref([]);
 
