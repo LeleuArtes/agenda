@@ -13,6 +13,7 @@
           :dark="true"
           :inline="true"
           :auto-apply="true"
+          :min-date="new Date()"
           class="vuepic-datepicker"
         />
         <div style="margin-top:8px;color:#FFD700;font-weight:bold;">
