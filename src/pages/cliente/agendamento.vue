@@ -14,7 +14,6 @@
           :inline="true"
           :auto-apply="true"
           :min-date="new Date()"
-          :month-change-on-scroll="false"
           class="vuepic-datepicker"
         />
         <div style="margin-top:8px;color:#FFD700;font-weight:bold;">
@@ -105,13 +104,6 @@ onMounted(() => {
   userStore.fetchProfile();
   carregarAgendamentos();
   carregarServicos();
-  // Bloqueia scroll do calendário para troca de mês
-  setTimeout(() => {
-    const dp = document.querySelector('.vuepic-datepicker');
-    if (dp) {
-      dp.addEventListener('wheel', e => e.preventDefault(), { passive: false });
-    }
-  }, 500);
 });
 const agendamentosDia = ref([]);
 
